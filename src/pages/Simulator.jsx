@@ -29,7 +29,7 @@ const Simulator = () => {
   // Fetch complete stock data every 3 minutes
   const fetchStockData = async () => {
     try {
-      const response = await fetch("http://localhost:4000/stocks");
+      const response = await fetch("https://leo-ayud.onrender.com/stocks");
       const data = await response.json();
       if (Array.isArray(data)) {
         setStocks(data);
@@ -46,7 +46,7 @@ const Simulator = () => {
   // Fetch only live prices every 3 seconds
   const fetchLivePrices = async () => {
     try {
-      const response = await fetch("http://localhost:4000/live-prices");
+      const response = await fetch("https://leo-ayud.onrender.com/live-prices");
       const liveData = await response.json();
       if (Array.isArray(liveData)) {
         setStocks((prevStocks) =>
