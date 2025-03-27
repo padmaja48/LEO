@@ -6,7 +6,7 @@ const Chatbot = () => {
   const [response, setResponse] = useState("");
 
   const sendMessage = async () => {
-    const res = await axios.post("http://localhost:8000/chat", { message: input });
+    const res = await axios.post("https://leo-ayud.onrender.com/chat", { message: input });
     setResponse(res.data.response);
   };
 
