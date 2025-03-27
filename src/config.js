@@ -1,1 +1,1 @@
-export const backendUrl = "http://localhost:5000"; // Update this in production
+export const backendUrl = "https://leo-ayud.onrender.com"; // Update this in production
