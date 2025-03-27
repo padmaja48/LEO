@@ -1,0 +1,43 @@
+/* Toast notification styles */
+.Toastify__toast {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    padding: 16px;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .Toastify__toast--success {
+    background-color: #4caf50; /* Green for success */
+    color: white;
+  }
+  
+  .Toastify__toast--error {
+    background-color: #f44336; /* Red for error */
+    color: white;
+  }
+  
+  .Toastify__toast--info {
+    background-color: #2196f3; /* Blue for info */
+    color: white;
+  }
+  
+  .Toastify__toast--warning {
+    background-color: #ff9800; /* Orange for warning */
+    color: white;
+  }
+  
+  .Toastify__toast__message {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .Toastify__toast-container {
+    top: 20px !important; /* Customize positioning of the toast */
+    left: 50% !important;
+    transform: translateX(-50%);
+    z-index: 9999;
+  }
+  

@@ -1,0 +1,167 @@
+/* Container for the entire simulator */
+.simulator-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+
+/* Left Frame - Market Watch (30%) */
+.left-frame {
+  width: 30%;
+  height: 100%;
+  background-color: #1e1e1e;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Market Watch Section */
+.market-watch {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Search Box */
+.search-box {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Stock List - Scrollable */
+.stock-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: calc(100vh - 140px); /* Prevent overflow, adjust as needed */
+  padding-right: 5px; /* Prevent text cutoff */
+}
+
+/* Stock Item */
+.stock-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #292929;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Stock Details */
+.stock-details {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Stock Actions */
+.stock-actions {
+  display: flex;
+  gap: 5px;
+}
+
+/* Button Styling */
+.buy-button, .sell-button, .chart-button {
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.buy-button {
+  background-color: green !important;
+  color: white;
+}
+
+.sell-button {
+  background-color: red !important;
+  color: white;
+}
+
+.chart-button {
+  background-color: rgb(238, 245, 35) !important;
+  color: black !important;
+}
+
+/* Right Frame (70%) */
+.right-frame {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Frame - Trading Chart */
+.top-frame {
+  flex-grow: 1;
+  background-color: #282828;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  overflow: hidden; /* Prevents unwanted outer scrolling */
+}
+
+/* TradingView Chart Container */
+.tradingview-widget-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents unnecessary scroll outside */
+  position: relative;
+}
+
+/* Ensure Chart Scrolls Horizontally & Vertically */
+.tradingview-widget-container__widget {
+  width: 150%; /* Expand for better scrolling */
+  height: 100%;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  overflow-y: auto; /* Enables vertical scrolling */
+  display: flex;
+  position: relative;
+}
+
+/* Bottom Frame - Open Positions */
+.bottom-frame {
+  height: 40%;
+  background-color: #1e1e1e;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Open Positions Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #333;
+}
+
+/* Close Position Button */
+.close-position {
+  background-color: orange;
+  color: black;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}

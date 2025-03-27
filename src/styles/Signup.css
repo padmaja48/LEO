@@ -1,0 +1,198 @@
+/* Full-screen Black Background */
+
+
+/* Custom Scrollbar for WebKit Browsers */
+.signup-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.signup-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ff99, #0099ff);
+  border-radius: 10px;
+}
+
+.signup-container::-webkit-scrollbar-track {
+  background: #111;
+  border-radius: 10px;
+}
+
+/* Centered Title with Gradient */
+.signup-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #00ff99, #0099ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.5px;
+}
+
+/* Signup Form Grid */
+.signup-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px 50px; /* Adjusted spacing for a cleaner layout */
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Full-width fields */
+.full-width {
+  grid-column: span 2;
+}
+
+/* Labels */
+.signup-label {
+  font-size: 16px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #f0f0f0;
+  display: block;
+}
+
+/* Input Fields & Dropdown */
+.signup-input,
+.signup-dropdown {
+  padding: 14px;
+  font-size: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  width: 100%;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+/* Ensuring all input fields are uniform in size */
+.signup-input {
+  height: 50px;
+}
+
+.signup-dropdown {
+  height: 54px;
+  appearance: none; /* Hides default dropdown arrow */
+  padding-right: 30px; /* Space for custom dropdown icon */
+}
+
+/* Hover Effect for Inputs */
+.signup-input:hover,
+.signup-dropdown:hover {
+  border-color: #00ff99;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px rgba(0, 255, 153, 0.8);
+}
+
+/* Disabled Dropdown */
+.signup-dropdown:disabled {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: not-allowed;
+}
+
+/* Dropdown Options */
+.signup-dropdown option {
+  background-color: #222;
+  color: white;
+}
+
+/* Signup Button */
+.signup-button {
+  grid-column: span 2;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #00ff99, #0099ff);
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+/* Disabled Button */
+.signup-button:disabled {
+  background: gray;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Hover Effect */
+.signup-button:hover {
+  background: linear-gradient(45deg, #0099ff, #00ff99);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.8);
+}
+
+/* Success Message */
+.success-message {
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+  background: rgba(0, 255, 0, 0.2);
+  border: 2px solid lime;
+  border-radius: 10px;
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Full-screen Black Background */
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: #000; /* Black Background */
+  color: white;
+  padding: 40px 20px 60px; /* Added bottom padding */
+  overflow-y: auto; /* Enables scrolling */
+  scrollbar-width: thin;
+  scrollbar-color: #00ff99 #111;
+}
+
+/* Fix signup button visibility */
+.signup-button {
+  grid-column: span 2;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #00ff99, #0099ff);
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  margin-top: 10px; /* Added spacing */
+}
+

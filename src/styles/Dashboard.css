@@ -1,0 +1,114 @@
+/* 🌟 Dashboard Container - Glassmorphism + Gradient */
+.dashboard-container {
+  padding: 25px;
+  background: linear-gradient(135deg, #121212, #1e1e1e);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  max-width: 90%;
+  margin: 20px auto;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 🔥 Section Titles - Elegant and Underlined */
+.section-title {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid rgba(0, 255, 88, 0.7);
+  letter-spacing: 1px;
+}
+
+/* 🎯 Portfolio Summary - Card Layout */
+.summary-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 5px 12px rgba(0, 255, 88, 0.2);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 255, 88, 0.4);
+}
+
+.card h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* 📈 Market Data & Recent Orders - Table Design */
+.market-table, .orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.market-table th, .orders-table th {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+
+.market-table td, .orders-table td {
+  padding: 12px;
+  text-align: center;
+  color: #e0e0e0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.market-table tr:nth-child(even), .orders-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.market-table tr:hover, .orders-table tr:hover {
+  background: rgba(0, 255, 88, 0.1);
+  transition: 0.3s;
+}
+
+/* ✅ Profit & Loss Colors - Neon Glow */
+.green-text {
+  color: #00ff88;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(0, 255, 88, 0.8);
+}
+
+.red-text {
+  color: #ff4444;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 68, 68, 0.8);
+}
+
+/* 🎮 Interactive Hover Effects */
+.orders-table tr:hover td {
+  transform: scale(1.02);
+  transition: 0.3s ease-in-out;
+}
+
+/* 🛠 Responsive Design */
+@media (max-width: 768px) {
+  .summary-cards {
+    flex-direction: column;
+  }
+}

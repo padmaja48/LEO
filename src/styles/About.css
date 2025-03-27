@@ -1,0 +1,143 @@
+/* Ensure only About Page gets black background */
+.about-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #000000; /* Black Background */
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Glassmorphism Container */
+.about-container {
+  max-width: 850px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.1); /* Slightly Brighter Glass Effect */
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 80px; /* Increased space above footer */
+}
+
+.about-container:hover {
+  transform: scale(1.03);
+}
+
+/* Title with Smooth Gradient */
+.about-title {
+  font-size: 34px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ffcc00, #ff4b1f);
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Description Text */
+.about-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+/* Feature Box */
+.feature-item {
+  flex: 1;
+  min-width: 200px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.12);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Feature Titles */
+.feature-item h3 {
+  font-size: 20px;
+  color: #ffcc00;
+  margin-bottom: 8px;
+}
+
+/* Feature Description */
+.feature-item p {
+  font-size: 16px;
+  color: #d1d5db;
+}
+
+/* Call-to-Action Button */
+.about-btn {
+  background: linear-gradient(90deg, #ffcc00, #ff4b1f);
+  color: #121212;
+  padding: 14px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+.about-btn:hover {
+  background: linear-gradient(90deg, #ff4b1f, #ffcc00);
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.9);
+}
+/* Vertical Scroll Banner */
+.vertical-scroll-banner {
+  width: 100%;
+  height: 150px; /* Adjust the height as needed */
+  background-color: #333; /* Background color for the banner */
+  overflow: hidden; /* Hide overflow so only part of the content is visible */
+  position: relative;
+  margin-bottom: 20px; /* Add space between the banner and other elements */
+}
+
+/* Content that scrolls vertically */
+.scroll-content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  animation: scrollVertical 10s linear infinite; /* Animation for continuous scroll */
+}
+
+/* Each item inside the scroll container */
+.scroll-item {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 20px; /* Space between items */
+  white-space: nowrap;
+  padding: 10px;
+}
+
+/* Keyframes for the vertical scrolling animation */
+@keyframes scrollVertical {
+  0% {
+    transform: translateY(100%); /* Start off-screen at the bottom */
+  }
+  100% {
+    transform: translateY(-100%); /* End off-screen at the top */
+  }
+}

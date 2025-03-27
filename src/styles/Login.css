@@ -1,0 +1,90 @@
+/* Background with dark stock-market vibes */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('https://source.unsplash.com/1600x900/?finance,stocks') no-repeat center center/cover;
+  padding: 20px;
+}
+
+/* Glassmorphism effect for a sleek login box */
+.login-box {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  width: 400px;
+  text-align: center;
+  color: white;
+}
+
+/* Title with stock-market feel */
+.login-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #00ff99; /* Neon trading color */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Input fields */
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Input focus effect */
+.login-input:focus {
+  border-color: #00ff99;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Login Button */
+.login-button {
+  width: 100%;
+  background: linear-gradient(45deg, #00ff99, #0099ff);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover Effect */
+.login-button:hover {
+  background: linear-gradient(45deg, #0099ff, #00ff99);
+  transform: scale(1.05);
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #00ff99;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+  color: #0099ff;
+}

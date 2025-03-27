@@ -1,0 +1,115 @@
+/* Holdings Container */
+.holdings-container {
+  background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  margin: 25px auto;
+  max-width: 95%;
+  overflow-x: auto;
+}
+
+/* Title */
+.holdings-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #f8f8f8;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Table */
+.holdings-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+/* Table Headers */
+.holdings-table th {
+  background: linear-gradient(135deg, #333, #444);
+  color: #ffffff;
+  padding: 14px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 3px solid #555;
+}
+
+/* Table Rows */
+.holdings-table td {
+  padding: 12px;
+  text-align: center;
+  color: #e0e0e0;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease;
+}
+
+/* Alternate row styling */
+.holdings-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Hover effect */
+.holdings-table tr:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Profit & Loss Colors */
+.green-text {
+  color: #00ff88;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+}
+
+.red-text {
+  color: #ff4444;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 68, 68, 0.6);
+}
+
+/* Sell Button */
+.sell-button {
+  background: linear-gradient(135deg, #ff4444, #cc0000);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 3px 8px rgba(255, 68, 68, 0.3);
+}
+
+.sell-button:hover {
+  background: linear-gradient(135deg, #ff6666, #dd0000);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .holdings-container {
+    padding: 15px;
+  }
+  .holdings-title {
+    font-size: 22px;
+  }
+  .holdings-table th,
+  .holdings-table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .sell-button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}

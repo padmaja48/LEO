@@ -1,0 +1,138 @@
+/* Container for the orders section */
+.orders-container {
+  max-width: 90%;
+  margin: 30px auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #1a1a1a, #292929); /* Modern Gradient Background */
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(54, 190, 23, 0.886); /* Soft shadow with a professional touch */
+  text-align: center;
+}
+
+/* Title Styling */
+.orders-title {
+  font-size: 28px;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2); /* Subtle white shadow for depth */
+}
+
+/* Table Styling */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #222; /* Dark background for the table */
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Table Header Styling */
+.orders-table thead {
+  background: #19a7d6; /* Soft blue background for header */
+}
+
+.orders-table th {
+  color: #ffffff;
+  padding: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* Table Row Styling */
+.orders-table td {
+  padding: 12px;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+/* Row Transitions */
+.orders-table tr {
+  transition: background 0.3s ease-in-out;
+}
+
+.orders-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05); /* Light alternating rows */
+}
+
+.orders-table tr:hover {
+  background: rgba(255, 255, 255, 0.15); /* Hover effect */
+  cursor: pointer;
+}
+
+/* Buy and Sell Order Colors */
+.buy-text {
+  color: #28a745; /* Professional Green (slightly muted) */
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.sell-text {
+  color: #e74c3c; /* Professional Red */
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Buy & Sell Button Styling */
+.buy-button {
+  background-color: #28a745; /* Green button for Buy */
+  color: #ffffff; /* White text */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #218838; /* Slightly darker green on hover */
+}
+
+.sell-button {
+  background-color: #e74c3c; /* Red button for Sell */
+  color: #ffffff; /* White text */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sell-button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .orders-container {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .orders-table th,
+  .orders-table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* White Text Utility */
+.white-text {
+  color: white;
+}
+
+/* Special Styles for Order Status */
+.completed {
+  color: #2ecc71; /* Soft Green for completed orders */
+}
+
+.pending {
+  color: #f39c12; /* Yellowish color for pending orders */
+}
+

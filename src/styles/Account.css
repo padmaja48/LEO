@@ -1,0 +1,83 @@
+/* 🌟 Account Page - Glassmorphism Design */
+.account-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: white;
+}
+
+/* 🎭 Profile Section */
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #00ff88;
+}
+
+.account-type {
+  color: #00ff88;
+  font-weight: bold;
+}
+
+/* 💰 Account Details */
+.account-details {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  margin: 15px 0;
+}
+
+.balance {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ff88;
+}
+
+/* 🎮 Buttons */
+.account-actions button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.settings-btn { background: #0084ff; color: white; }
+.security-btn { background: #ff4444; color: white; }
+.support-btn { background: #ffa500; color: white; }
+
+.account-actions button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* Loading and Error Handling */
+.loading, .error {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.error {
+  color: #ff4444;
+}

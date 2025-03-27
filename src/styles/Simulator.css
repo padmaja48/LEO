@@ -1,0 +1,476 @@
+/* General Container Styling */
+.simulator-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Left Frame Styling */
+.left-frame {
+  width: 25%;
+  background: #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 40px);
+  overflow: hidden;
+}
+
+.market-watch {
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-box {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background: #222;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.stock-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #2a2a2a;
+  max-height: calc(100vh - 120px);
+}
+
+.stock-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.stock-details {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.stock-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.stock-actions button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.buy-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.sell-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.chart-button {
+  background-color: #ffcc00;
+  color: black;
+}
+
+/* Right Frame Styling */
+.right-frame {
+  width: 76%;
+  background: #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 40px);
+}
+
+.full-chart-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.chart-resize {
+  margin: 10px 0;
+}
+
+.tradingview-chart {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #444;
+  border-radius: 5px;
+}
+
+.chart-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.chart-options button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chart-options button:hover {
+  background: #0056b3;
+}
+
+.buy-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.input-group input {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.cancel-buy {
+  background: #dc3545;
+}
+
+.resize-handle {
+  width: 100%;
+  height: 10px;
+  background: #ccc;
+  cursor: ns-resize;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+.buy-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.cancel-buy {
+  background-color: #dc3545;
+  color: white;
+}
+/* Success Message Styles */
+/* Assuming your success message is already styled with the 'success-message' class */
+
+.success-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;  /* Green background */
+  color: white;  /* White text */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.success-message.show {
+  display: block;  /* Show the message */
+  opacity: 1;
+}
+
+  
+  
+
+/* Modal Container */
+.buy-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Modal Title */
+.buy-modal h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Modal Content (Stock Info) */
+.buy-modal p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Buy Button */
+.buy-btn {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #45a049;
+}
+
+/* Close Button */
+.close-btn {
+  background-color: #f44336;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #e53935;
+}
+
+/* Overlay Background (when modal is open) */
+.buy-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+/* In your CSS file */
+.buy-modal, .sell-modal {
+  /* Same styles for both modals */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buy-btn, .sell-btn {
+  /* Same button styling */
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.close-btn {
+  /* Close button styling */
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* General Modal Styling */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 9999;
+  width: 300px;
+}
+
+.buy-modal,
+.sell-modal {
+  /* Ensure both buy and sell modals use the same class for styling */
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Live Stream Styling - CNBC TV18 and Bloomberg */
+.live-channels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.cnbc-tv18 {
+  position: relative;
+  flex: 0 0 48%; /* 48% width of the container */
+}
+
+.bloomberg-tv {
+  position: relative;
+  flex: 0 0 48%; /* 48% width of the container */
+}
+
+.tradingview-chart {
+  margin-bottom: 0%; /* Space between the chart and the TV streams */
+}
+
+/* CNBC TV18 (Bottom-Left of the Chart) */
+.cnbc-tv18 iframe {
+  width: 50%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  background: #000;
+}
+/* Yahoo TV (Bottom-between CNBC TV18 and Bloomberg TV of the Chart) */
+.Yahoo-tv iframe {
+  width: 70%;
+  height: 120%;
+  border: none;
+  border-radius: 8px;
+  background: #000;
+}
+/* Bloomberg TV (Bottom-Middle of the Chart) */
+.bloomberg-tv iframe {
+  width: 50%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  background: #000;
+}
+
+/* Draggable TV Streams */
+.draggable-channel {
+  position: relative;
+  cursor: move;
+}
+
+/* Styling for the modal confirmation buttons */
+.buy-button, .cancel-buy {
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+/* Styling for the YouTube embed containers */
+.youtube-embed-containers {
+  position: absolute;
+  bottom: 20px; /* Position the containers 20px from the bottom */
+  left: 50%; /* Start from the center horizontally */
+  transform: translateX(-50%); /* Offset by 50% to keep the container centered */
+  display: flex; /* Flexbox layout to position items side by side */
+  justify-content: space-evenly; /* Evenly space the children (CNBC and Bloomberg) */
+  width: 40%; /* Adjust width of the container to ensure enough space for both embeds */
+}
+
+/* Styling for each individual embed container */
+.youtube-embed-container {
+  cursor: move; /* Change cursor to indicate draggable */
+  z-index: 100; /* Ensure they stay above other elements */
+}
+
+/* Optional: iframe specific styles */
+.youtube-embed-container iframe {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
