@@ -21,7 +21,7 @@ const Footer = () => {
     if (!message) return;
 
     try {
-      const response = await fetch("https://leo-ayud.onrender.com/api/chatbot", {
+      const response = await fetch("https://leo-6kuu.onrender.com/api/chatbot", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
