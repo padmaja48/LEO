@@ -1,9 +1,15 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  define: {
-    'process.env': {}, // Fix for "process is not defined"
+  server: {
+    host: '0.0.0.0',  // Listen on all interfaces
+    port: process.env.PORT || 5173,  // Use the Render-provided PORT or fallback to 5173
+    allowedHosts: [
+      'versel-recler-9.onrender.com', // Allow this host
+      'localhost', // Allow localhost (for local development)
+    ],
   },
-});
+})
